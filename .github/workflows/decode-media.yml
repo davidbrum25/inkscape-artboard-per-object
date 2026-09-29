@@ -1,0 +1,29 @@
+name: Decode README screenshots
+
+on:
+  push:
+    paths:
+      - .github/workflows/decode-media.yml
+
+permissions:
+  contents: write
+
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Turn the uploaded screenshot data into image files
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          for f in media/*.b64; do
+            base64 -d "$f" > "${f%.b64}"
+            rm "$f"
+          done
+          rm -rf media/parts .github
+          git config user.name "David Brum"
+          git config user.email "32180810+davidbrum25@users.noreply.github.com"
+          git add -A
+          git commit -m "Add the README screenshots."
+          git push
