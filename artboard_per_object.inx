@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Artboard per Object</name>
+  <id>org.davidbrum.artboard_per_object</id>
+  <param name="margin" type="float" min="-10000" max="10000" precision="3"
+      gui-text="Margin"
+      gui-description="Extra space added on every side of each object. Negative values shrink the page.">0</param>
+  <param name="margin_unit" type="optiongroup" appearance="combo" gui-text="Margin unit">
+    <option value="mm">mm</option>
+    <option value="cm">cm</option>
+    <option value="in">in</option>
+    <option value="pt">pt</option>
+    <option value="px">px (CSS pixels)</option>
+    <option value="uu">user units (page coordinates)</option>
+  </param>
+  <param name="order" type="optiongroup" appearance="combo" gui-text="Page order">
+    <option value="document">Selection order</option>
+    <option value="rows">Rows, left to right</option>
+    <option value="columns">Columns, top to bottom</option>
+  </param>
+  <param name="label" type="optiongroup" appearance="combo" gui-text="Page name">
+    <option value="name">Object name, or its id</option>
+    <option value="id">Object id</option>
+    <option value="number">Page number</option>
+  </param>
+  <param name="existing" type="optiongroup" appearance="combo" gui-text="Existing pages">
+    <option value="append">Keep them and add new pages</option>
+    <option value="replace">Replace them</option>
+  </param>
+  <param name="delete_objects" type="bool" gui-text="Delete the selected objects afterwards">false</param>
+  <effect needs-live-preview="false">
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu name="Document"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">artboard_per_object.py</command>
+  </script>
+</inkscape-extension>
