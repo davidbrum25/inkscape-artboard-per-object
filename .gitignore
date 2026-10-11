@@ -1,2 +1,8 @@
 __pycache__/
 *.py[cod]
+
+# Secretos / variables de entorno
+.env
+.env.*
+!.env.example
+*.pem
