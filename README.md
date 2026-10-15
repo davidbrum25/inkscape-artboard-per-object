@@ -4,7 +4,7 @@ An Inkscape extension that creates one page for each selected object.
 
 The pages stay where the objects already are. Each page is that object's visual bounding box, stroke included, plus an optional margin.
 
-![A sheet of separate objects on one Inkscape canvas, before any pages are added](media/screen_01_objects.jpg)
+![A sheet of separate objects on one Inkscape canvas, before any pages are added](media/screen_01_objects.webp)
 
 ## Install
 
@@ -26,11 +26,17 @@ On Windows the extensions folder is `%APPDATA%\inkscape\extensions`.
 2. Open **Extensions → Document → Artboard per Object**.
 3. Apply.
 
-![The extension in the Extensions, Document menu, with the objects selected](media/screen_02_objectsselected.jpg)
+![The extension in the Extensions, Document menu, with the objects selected](media/screen_02_objectsselected.webp)
 
-![The Artboard per Object dialog: margin, units, page order, page name, and what to do with existing pages](media/screen_03_popup.png)
+![The Artboard per Object dialog: margin, units, page order, page name, and what to do with existing pages](media/screen_03_popup.webp)
 
-![The same objects, each sitting on its own numbered page](media/screen_04_pagesadded.jpg)
+![The same objects, each sitting on its own numbered page](media/screen_04_pagesadded.webp)
+
+A short screen recording of the whole flow:
+
+![Screen recording of pages being added from start to finish](media/screen_sample.gif)
+
+The same recording as a smaller video file: [screen_sample.webm](media/screen_sample.webm).
 
 ## Options
 
